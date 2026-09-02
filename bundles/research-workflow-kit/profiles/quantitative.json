@@ -1,0 +1,22 @@
+{
+  "name": "quantitative",
+  "description": "Design, power, statistics, Notebook execution, uncertainty and visualization.",
+  "risk": "methods must match the design; run code and inspect assumptions",
+  "skillIds": [
+    "research-workflow-kit::research-workflow-orchestrator",
+    "research-workflow-kit::research-question-protocol",
+    "research-workflow-kit::reproducible-research-analysis",
+    "research-workflow-kit::academic-integrity-ai-disclosure",
+    "scientific-agent-skills::skills/experimental-design",
+    "scientific-agent-skills::skills/statistical-analysis",
+    "scientific-agent-skills::skills/statistical-power",
+    "scientific-agent-skills::skills/exploratory-data-analysis",
+    "scientific-agent-skills::skills/scientific-visualization",
+    "scientific-agent-skills::skills/matplotlib",
+    "scientific-agent-skills::skills/seaborn",
+    "scientific-agent-skills::skills/statsmodels",
+    "scientific-agent-skills::skills/pymc",
+    "scientific-agent-skills::skills/uncertainty-and-units",
+    "openai-skills::skills/.curated/jupyter-notebook"
+  ]
+}

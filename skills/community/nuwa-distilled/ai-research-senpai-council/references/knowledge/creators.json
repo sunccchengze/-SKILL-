@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "checked_at": "2026-08-16",
+  "creators": [
+    {
+      "creator_id": "zoey",
+      "display_name": "爱读书的Zoey / Zoey-SKILL",
+      "canonical_name": "爱读书的Zoey",
+      "platforms": [
+        "小红书"
+      ],
+      "languages": [
+        "zh-CN"
+      ],
+      "council_role": "AI科研工作流、文献训练、读博边界",
+      "strengths": [
+        "AI科研",
+        "文献检索",
+        "文献阅读",
+        "导师关系",
+        "健康边界"
+      ],
+      "evidence_profile": "仅承接本仓库 Zoey-SKILL 的暂定点点转述语料；账号和原始笔记尚未独立核验。",
+      "commercial_disclosure": "现有暂定语料中的商业关系覆盖不完整；不得推定无利益冲突。",
+      "integrity_flags": [
+        "provisional_identity",
+        "mediated_export",
+        "incomplete_coverage"
+      ],
+      "identity_note": "用户指定小红书 ID 701529322；本项目尚未独立验证该 ID 与目标账号的对应关系。"
+    },
+    {
+      "creator_id": "yang-shixiong",
+      "display_name": "爱研究的杨师兄",
+      "canonical_name": "爱研究的杨师兄",
+      "platforms": [
+        "哔哩哔哩"
+      ],
+      "languages": [
+        "zh-CN"
+      ],
+      "council_role": "AI科研工具实操与网站发现",
+      "strengths": [
+        "AI科研工具",
+        "科研网站",
+        "文献工作流"
+      ],
+      "evidence_profile": "已核验原创账号和视频页；当前页面没有可用逐字稿，细节只能停留在标题和简介层。",
+      "commercial_disclosure": "账号公开商务联系方式，并销售 Codex 综述训练营；相关链接含三天退款宣传。",
+      "integrity_flags": [
+        "commercial_training",
+        "outcome_marketing",
+        "no_transcript_for_sampled_pages"
+      ],
+      "identity_note": "账号自述为工科博士，专注 AI 助力科研实操教学。"
+    },
+    {
+      "creator_id": "mai-xiaozhe",
+      "display_name": "读论文的麦小哲",
+      "canonical_name": "读论文的麦小哲",
+      "platforms": [
+        "哔哩哔哩"
+      ],
+      "languages": [
+        "zh-CN"
+      ],
+      "council_role": "文献阅读、论文结构与研究生基础训练",
+      "strengths": [
+        "文献阅读",
+        "论文写作",
+        "研究生方法"
+      ],
+      "evidence_profile": "已核验原创账号和两条视频页；抓取页没有逐字稿，不能复原所谓“三步法”的具体步骤。",
+      "commercial_disclosure": "账号简介写有商务合作；具体视频是否赞助需逐条核验。",
+      "integrity_flags": [
+        "no_transcript_for_sampled_pages",
+        "commercial_contact"
+      ],
+      "identity_note": "账号简介称分享学习、科研经验和生活日常。"
+    },
+    {
+      "creator_id": "simin",
+      "display_name": "一只思敏在浙大",
+      "canonical_name": "一只思敏在浙大",
+      "platforms": [
+        "哔哩哔哩",
+        "小红书",
+        "微信公众号"
+      ],
+      "languages": [
+        "zh-CN"
+      ],
+      "council_role": "导师沟通、博士心态、生活边界与论文澄清",
+      "strengths": [
+        "导师沟通",
+        "读博心态",
+        "健康边界",
+        "论文问题澄清"
+      ],
+      "evidence_profile": "身份自述与五条原创视频页已核验；抽样页均无可用逐字稿，建议只能按标题/简介粒度引用。",
+      "commercial_disclosure": "公开招募科研咨询和论文辅导，并展示辅导案例；建议可能与付费服务相关。",
+      "integrity_flags": [
+        "commercial_coaching",
+        "testimonial_marketing",
+        "title_level_only"
+      ],
+      "identity_note": "创作者在视频简介中自述为已毕业的浙大工科博士。"
+    },
+    {
+      "creator_id": "he-jing",
+      "display_name": "北航90后副教授何静",
+      "canonical_name": "何静",
+      "platforms": [
+        "哔哩哔哩",
+        "北航教师主页"
+      ],
+      "languages": [
+        "zh-CN"
+      ],
+      "council_role": "AI科研智能体、OpenClaw、验证、权限与版本治理",
+      "strengths": [
+        "AI科研工作流",
+        "Skill",
+        "MCP",
+        "幻觉验证",
+        "隐私权限",
+        "版本管理"
+      ],
+      "evidence_profile": "课程页含创作者撰写的详细五部分提纲；北航主页独立确认姓名、工学博士和硕士生导师身份。",
+      "commercial_disclosure": "抽样页面未发现明确付费链接，但不能据此推定其他内容无商业关系。",
+      "integrity_flags": [
+        "rank_only_in_account_title"
+      ],
+      "identity_note": "“副教授”来自 B 站账号展示名；抓取到的北航主页未显示职称，因此机构页仅用于确认身份、学位和导师资格。"
+    },
+    {
+      "creator_id": "li-mu",
+      "display_name": "跟李沐学AI",
+      "canonical_name": "李沐",
+      "platforms": [
+        "哔哩哔哩"
+      ],
+      "languages": [
+        "zh-CN"
+      ],
+      "council_role": "AI论文阅读与大模型时代研究方向",
+      "strengths": [
+        "AI论文精读",
+        "研究选题",
+        "大模型研究策略"
+      ],
+      "evidence_profile": "两条原创视频页已核验，但无逐字稿；四个研究方向仅有多个二手笔记一致转述，必须标为 secondary_summary。",
+      "commercial_disclosure": "账号页显示 BosonAI 联合创始人身份；涉及模型、公司或工具评价时应考虑该关联。",
+      "integrity_flags": [
+        "secondary_summary_for_four_directions",
+        "industry_affiliation"
+      ],
+      "identity_note": "原创账号“跟李沐学AI”。"
+    },
+    {
+      "creator_id": "andy-stapleton",
+      "display_name": "Andy Stapleton",
+      "canonical_name": "Dr Andrew Stapleton",
+      "platforms": [
+        "YouTube",
+        "Academia Insider",
+        "个人网站"
+      ],
+      "languages": [
+        "en"
+      ],
+      "council_role": "AI科研工具比较、博士职业现实与工作流探索",
+      "strengths": [
+        "AI工具",
+        "文献搜索",
+        "文献映射",
+        "多文档问答",
+        "博士职业"
+      ],
+      "evidence_profile": "已核验个人网站、创作者文章和带逐字稿视频；工具结论是创作者测评，不是独立基准。",
+      "commercial_disclosure": "经营课程、newsletter，并在多款工具链接中使用折扣码或联盟链接。",
+      "integrity_flags": [
+        "affiliate_links",
+        "paid_course",
+        "detector_bypass_promotion"
+      ],
+      "identity_note": "个人网站将其 YouTube 内容定位为博士职业与学界现实建议。"
+    },
+    {
+      "creator_id": "amina-yonis",
+      "display_name": "Dr Amina Yonis",
+      "canonical_name": "Amina Yonis",
+      "platforms": [
+        "YouTube"
+      ],
+      "languages": [
+        "en"
+      ],
+      "council_role": "研究问题、文献发现、证据筛选、主题化与提纲",
+      "strengths": [
+        "研究问题",
+        "文献综述",
+        "Scite",
+        "R Discovery",
+        "ChatPDF",
+        "论文提纲"
+      ],
+      "evidence_profile": "两条原创视频的元数据和完整可抓取逐字稿已核验，可支持步骤级转述。",
+      "commercial_disclosure": "两条抽样视频简介均推广其付费校对/指导业务、咨询、模板与指南、课程及相关创作者业务；路由其工具和流程建议时必须披露。",
+      "integrity_flags": [
+        "commercial_services"
+      ],
+      "identity_note": "YouTube 原创上传者 Dr Amina Yonis。"
+    },
+    {
+      "creator_id": "tara-brabazon",
+      "display_name": "Tara Brabazon",
+      "canonical_name": "Professor Tara Brabazon",
+      "platforms": [
+        "YouTube"
+      ],
+      "languages": [
+        "en"
+      ],
+      "council_role": "博士年度规划、论文嵌套与研究优先级",
+      "strengths": [
+        "博士规划",
+        "发表规划",
+        "时间管理",
+        "论文优先级"
+      ],
+      "evidence_profile": "一条原创长视频的元数据和完整可抓取逐字稿已核验。",
+      "commercial_disclosure": "抽样视频未见明确产品销售；不代表其全部内容不存在商业关系。",
+      "integrity_flags": [],
+      "identity_note": "以创作者公开视频中的姓名和角色为准。"
+    },
+    {
+      "creator_id": "james-hayton",
+      "display_name": "James Hayton",
+      "canonical_name": "James Hayton",
+      "platforms": [
+        "YouTube"
+      ],
+      "languages": [
+        "en"
+      ],
+      "council_role": "论文写作训练、问题分解与可复用解法",
+      "strengths": [
+        "论文写作",
+        "问题解决",
+        "写作训练",
+        "博士完成"
+      ],
+      "evidence_profile": "一条原创长视频的元数据和完整可抓取逐字稿已核验。",
+      "commercial_disclosure": "创作者长期提供博士写作相关服务/产品；具体建议使用时应与销售主张分开。",
+      "integrity_flags": [
+        "commercial_coaching_context"
+      ],
+      "identity_note": "YouTube 原创上传者 James Hayton。"
+    },
+    {
+      "creator_id": "kriukow",
+      "display_name": "Qualitative Researcher Dr Kriukow",
+      "canonical_name": "Dr Kriukow",
+      "platforms": [
+        "YouTube",
+        "个人网站",
+        "Udemy"
+      ],
+      "languages": [
+        "en"
+      ],
+      "council_role": "质性分析、矛盾陈述、编码与主题分析",
+      "strengths": [
+        "质性研究",
+        "矛盾分析",
+        "访谈",
+        "主题分析",
+        "NVivo"
+      ],
+      "evidence_profile": "矛盾分析视频有完整逐字稿；Custom GPT 页仅有一句逐字稿和详细简介。",
+      "commercial_disclosure": "销售辅导和 Udemy 课程，并推广自建 Custom GPT。",
+      "integrity_flags": [
+        "commercial_courses",
+        "ai_detector_bypass_content_on_channel"
+      ],
+      "identity_note": "只路由其可核验的质性方法内容；频道中的 AI detector bypass 内容被隔离，绝不转化为规避检测建议。"
+    },
+    {
+      "creator_id": "academic-english-now",
+      "display_name": "Academic English Now",
+      "canonical_name": "Marek Kiczkowiak / Academic English Now",
+      "platforms": [
+        "YouTube",
+        "商业网站"
+      ],
+      "languages": [
+        "en"
+      ],
+      "council_role": "论文写作环境、优先级与投稿流程提醒",
+      "strengths": [
+        "学术英语",
+        "论文写作",
+        "专注环境",
+        "投稿"
+      ],
+      "evidence_profile": "已核验带逐字稿的写作流程视频和销售视频；效率建议可引用，保证发表与成功率主张不可背书。",
+      "commercial_disclosure": "销售 Q1 发表辅导系统并以保证、客户数量、成功率和成果案例营销。",
+      "integrity_flags": [
+        "guaranteed_publication_marketing",
+        "q1_outcome_marketing",
+        "commercial_coaching"
+      ],
+      "identity_note": "创作者在频道简介中自称 Marek Kiczkowiak，Academic English Now 创始人。"
+    }
+  ]
+}

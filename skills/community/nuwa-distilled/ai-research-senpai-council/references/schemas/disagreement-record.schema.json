@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sunccchengze/-SKILL-/schemas/ai-research-senpai-council/disagreement-record.schema.json",
+  "title": "AI Research Senpai Council disagreement record",
+  "description": "Schema for each JSON Lines row in references/governance/disagreements.jsonl.",
+  "type": "object",
+  "required": [
+    "disagreement_id", "kind", "topic", "positions", "resolution", "response_requirement"
+  ],
+  "properties": {
+    "disagreement_id": {"type": "string", "pattern": "^DIS-[0-9]{3}$"},
+    "kind": {
+      "enum": [
+        "evidence-backed tension", "priority tension", "scope tension",
+        "complementary emphasis", "automation boundary"
+      ]
+    },
+    "topic": {"type": "string", "minLength": 1},
+    "positions": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["claim_ids", "position"],
+        "properties": {
+          "claim_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string", "pattern": "^ARC-[0-9]{4}$"},
+            "uniqueItems": true
+          },
+          "position": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    },
+    "resolution": {"type": "string", "minLength": 1},
+    "response_requirement": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

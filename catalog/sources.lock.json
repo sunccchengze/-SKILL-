@@ -1,0 +1,729 @@
+{
+  "formatVersion": 1,
+  "generatedAt": "2026-08-15",
+  "aggregateSources": [
+    {
+      "id": "turbine",
+      "repository": "https://github.com/sunccchengze/turbine-blade-ai-platform",
+      "ref": "arena/019feb03-turbine-blade-ai-platform",
+      "commit": "eacef4277622470f44edef8ca852e8d1d7a53cf6",
+      "path": "技能库&准则",
+      "submodulePath": "full-sources/aggregate-turbine"
+    },
+    {
+      "id": "wind",
+      "repository": "https://github.com/sunccchengze/wind_farm_viz",
+      "ref": "arena/019feb53-wind-farm-viz",
+      "commit": "cf554c9a5429cec1206e9f496d2f2bfd6edeaa91",
+      "path": "技能库&准则",
+      "submodulePath": "full-sources/aggregate-wind"
+    },
+    {
+      "id": "repo",
+      "repository": "https://github.com/sunccchengze/-",
+      "ref": "arena/019ff697-repo",
+      "commit": "069c0aa03a8f79d88317c7567e8b21b8c7ea9a4f",
+      "path": "技能库&准则",
+      "submodulePath": "full-sources/aggregate-repo"
+    }
+  ],
+  "directSources": [
+    {
+      "id": "human-writing",
+      "repository": "https://github.com/KKKKhazix/human-writing",
+      "ref": "main",
+      "commit": "4fda173f3fef7fb808f3eba991eeb2528ea4b189",
+      "license": "MIT",
+      "installedAt": "skills/human-writing",
+      "submodulePath": "full-sources/human-writing"
+    },
+    {
+      "id": "victor-design",
+      "repository": "https://github.com/victorzhang016-code/victor-design",
+      "ref": "main",
+      "commit": "79ebc14d9e7d2d1b9f87024588b5880eb1560ef2",
+      "license": "MIT",
+      "installedAt": "skills/victor-design",
+      "submodulePath": "full-sources/victor-design"
+    },
+    {
+      "id": "openwiki",
+      "repository": "https://github.com/langchain-ai/openwiki",
+      "ref": "main",
+      "commit": "9fb009798a97baf0c0987b08cdac82233c801901",
+      "license": "MIT",
+      "installedAt": "tools/openwiki",
+      "submodulePath": "full-sources/openwiki"
+    },
+    {
+      "id": "screencoder",
+      "repository": "https://github.com/leigest519/ScreenCoder",
+      "ref": "main",
+      "commit": "e7c2caefa59c00e7a770b70cfda3eebc77b82f17",
+      "license": "Apache-2.0",
+      "installedAt": "tools/screencoder",
+      "skillEntry": "tools/screencoder/SKILL.md",
+      "snapshotMode": "compact-runtime",
+      "exclusions": [
+        "post-training stacks",
+        "sample and generated media",
+        "runtime tmp/archive",
+        "UIED sample data and models",
+        "IDE/cache files"
+      ],
+      "submodulePath": "full-sources/screencoder"
+    }
+  ],
+  "toolSources": [
+    {
+      "id": "opencut",
+      "publisher": "OpenCut-app",
+      "repository": "https://github.com/OpenCut-app/OpenCut",
+      "ref": "main",
+      "commit": "400f097becba5db0fbc305d5a65348cb81c20356",
+      "license": "MIT",
+      "submodulePath": "full-sources/tools/opencut",
+      "installedAt": "skills/opencut",
+      "runtime": "Bun 1.3.11; browser development server",
+      "role": "local browser-based video editor"
+    },
+    {
+      "id": "rustdesk",
+      "publisher": "rustdesk",
+      "repository": "https://github.com/rustdesk/rustdesk",
+      "ref": "1.4.9",
+      "commit": "6c578292e8ebbbec708b76986ba8c4bc7c509747",
+      "license": "AGPL-3.0",
+      "submodulePath": "full-sources/tools/rustdesk",
+      "installedAt": "skills/rustdesk",
+      "runtime": "native GUI; official OS package or platform build required",
+      "role": "authorized remote desktop and support"
+    },
+    {
+      "id": "spec-kit",
+      "publisher": "GitHub",
+      "repository": "https://github.com/github/spec-kit",
+      "ref": "v0.16.4",
+      "commit": "d1f50fcbe684a4222059c4ba7f2d7eabcca87402",
+      "license": "MIT",
+      "submodulePath": "full-sources/tools/spec-kit",
+      "installedAt": "skills/spec-kit",
+      "runtime": "specify-cli 0.16.4 in a user-local Python virtual environment",
+      "role": "specification-driven software development"
+    }
+  ],
+  "importPolicy": {
+    "mode": "compact-search-index-over-full-source-layer",
+    "description": "快速索引层保留每个不同 SKILL.md；完整技能包及全部上游文件由 full-sources 固定子模块提供。",
+    "communityFileLimitBytes": 500000,
+    "excluded": [
+      "archives",
+      "large media and fonts",
+      "test fixtures",
+      "dependency/build directories",
+      "complete application trees adjacent to collection-root SKILL.md"
+    ]
+  },
+  "distributionPolicy": {
+    "mode": "two-layer-full-source",
+    "authoritativeLayer": "Pinned Git submodules under full-sources/ contain complete upstream repositories and complete aggregate skill directories.",
+    "fastIndexLayer": "skills/community and skills/variants are a compact searchable cache; they are not the authoritative full package store.",
+    "initialize": "git submodule update --init --recursive",
+    "materialize": "python scripts/materialize_full_library.py",
+    "archivePolicy": "Materialized union excludes redundant zip/tar/gz/7z/rar archives by default; pass --keep-archives only when an archive is itself required.",
+    "researchLayer": "11 pinned full research repositories with 680 SKILL.md entry paths; initialize full-sources/research or materialize full-library/research.",
+    "officialLayer": "4 pinned first-party platform repositories with 859 SKILL.md entry paths under full-sources/official; openai-skills is upstream-deprecated and retained as a labeled legacy source.",
+    "curatedLayer": "22 pinned curated skill packages under full-sources/curated: 2 user-requested sources plus two separate, exactly-10 selections from repositories with rapid one-month star growth.",
+    "overlapLayer": "Raw catalogs and pinned sources preserve every path; catalog/overlap-policy.json suppresses 45 provenance-preserving aliases from default search while explicit source/path installation remains available."
+  },
+  "overlapPolicy": {
+    "catalog": "catalog/overlap-policy.json",
+    "rawCatalogEntries": 3784,
+    "defaultVisibleEntries": 3126,
+    "suppressedAliases": 45
+  },
+  "researchSources": [
+    {
+      "id": "academic-research-skills",
+      "repository": "https://github.com/Imbad0202/academic-research-skills",
+      "commit": "bc1478d8747b8fa2665aef5c8260f19999ce59cb",
+      "license": "CC-BY-NC-4.0",
+      "submodulePath": "full-sources/research/academic-research-skills",
+      "skillCount": 4,
+      "role": "human-in-the-loop research, writing, review, revision, and finalization",
+      "ref": "main"
+    },
+    {
+      "id": "academic-research-skills-codex",
+      "repository": "https://github.com/Imbad0202/academic-research-skills-codex",
+      "commit": "a43aaab2a3843d0c0a7432750dd5128b75bad35b",
+      "license": "CC-BY-NC-4.0",
+      "submodulePath": "full-sources/research/academic-research-skills-codex",
+      "skillCount": 2,
+      "role": "Codex-native ARS adapter",
+      "ref": "main"
+    },
+    {
+      "id": "nature-skills",
+      "repository": "https://github.com/Yuan1z0825/nature-skills",
+      "commit": "d1fb103c635e63288c0f2174460276b1ab7582d8",
+      "license": "Apache-2.0",
+      "submodulePath": "full-sources/research/nature-skills",
+      "skillCount": 19,
+      "role": "scientific search, statistics, figures, writing, review, response, and presentation",
+      "ref": "main"
+    },
+    {
+      "id": "scientific-agent-skills",
+      "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "commit": "5ad4aae76bc40257b914367afacc6fd686a282d5",
+      "license": "MIT",
+      "submodulePath": "full-sources/research/scientific-agent-skills",
+      "skillCount": 161,
+      "role": "cross-domain scientific computation, databases, and laboratory workflows",
+      "ref": "main"
+    },
+    {
+      "id": "aris",
+      "repository": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+      "commit": "e12e07c7b85ee1a4dc07e5463089aa16836af2bf",
+      "license": "MIT",
+      "submodulePath": "full-sources/research/aris",
+      "skillCount": 187,
+      "role": "autonomous ML ideation, experiments, adversarial review, writing, and rebuttal",
+      "ref": "main"
+    },
+    {
+      "id": "ai-research-skills",
+      "repository": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+      "commit": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "license": "MIT",
+      "submodulePath": "full-sources/research/ai-research-skills",
+      "skillCount": 98,
+      "role": "AI research engineering from architecture and training to serving and MLOps",
+      "ref": "main"
+    },
+    {
+      "id": "research-paper-writing-skills",
+      "repository": "https://github.com/Master-cai/Research-Paper-Writing-Skills",
+      "commit": "77e7c2c1ba06f7d71844873147665437a03aac1b",
+      "license": "MIT",
+      "submodulePath": "full-sources/research/research-paper-writing-skills",
+      "skillCount": 1,
+      "role": "ML, CV, and NLP paper writing",
+      "ref": "main"
+    },
+    {
+      "id": "paperspine",
+      "repository": "https://github.com/WUBING2023/PaperSpine",
+      "commit": "66dfbf0d620e00735274ce699eaf93ab4518da1e",
+      "license": "MIT",
+      "submodulePath": "full-sources/research/paperspine",
+      "skillCount": 5,
+      "role": "argument spine, evidence blueprints, manuscript revision, and LaTeX-safe audit",
+      "ref": "main"
+    },
+    {
+      "id": "paper-craft-skills",
+      "repository": "https://github.com/zsyggg/paper-craft-skills",
+      "commit": "3be47a2a53cc35a411c587bca5231a08de57287a",
+      "license": "MIT-claimed-in-README-no-LICENSE-file",
+      "submodulePath": "full-sources/research/paper-craft-skills",
+      "skillCount": 3,
+      "role": "paper analysis, method figures, visual articles, and slide decks",
+      "ref": "main"
+    },
+    {
+      "id": "hermes-agent",
+      "repository": "https://github.com/NousResearch/hermes-agent",
+      "commit": "e3983f91eb50e4942c50a9c65318437ba6ce0540",
+      "license": "MIT",
+      "submodulePath": "full-sources/research/hermes-agent",
+      "skillCount": 197,
+      "role": "research paper writing, arXiv, ideation, planning, and data-science skills",
+      "ref": "main"
+    },
+    {
+      "id": "hamelnb",
+      "repository": "https://github.com/hamelsmu/hamelnb",
+      "commit": "192f491fd388bbc190bcaa95542c5d5f98dae2ab",
+      "license": "NOASSERTION",
+      "submodulePath": "full-sources/research/hamelnb",
+      "skillCount": 3,
+      "role": "stateful live Jupyter kernel for iterative analysis",
+      "ref": "main"
+    }
+  ],
+  "researchCatalog": "catalog/research-skills.json",
+  "officialSources": [
+    {
+      "id": "openai-plugins",
+      "publisher": "OpenAI",
+      "repository": "https://github.com/openai/plugins",
+      "ref": "main",
+      "commit": "11c74d6ba24d3a6d48f54a194cd00ef3beea18f9",
+      "license": "mixed-per-plugin",
+      "licenseNote": "The pinned repository has no root license; individual plugins or skills may carry distinct licenses or upstream terms. Verify the selected package.",
+      "submodulePath": "full-sources/official/openai-plugins",
+      "skillCount": 608,
+      "role": "Current Codex plugin marketplace skills for productivity, communication, development, deployment, design, research, and connected services"
+    },
+    {
+      "id": "openai-skills",
+      "publisher": "OpenAI",
+      "repository": "https://github.com/openai/skills",
+      "ref": "main",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": "per-skill",
+      "licenseNote": "Each cataloged package carries a local license file (with filename casing that varies); verify the selected package.",
+      "submodulePath": "full-sources/official/openai-skills",
+      "skillCount": 44,
+      "role": "Legacy Codex skill catalog retained at its last audited pin for workflows not yet selected from the successor plugin marketplace",
+      "status": "upstream-deprecated",
+      "successor": "https://github.com/openai/plugins"
+    },
+    {
+      "id": "vercel-agent-skills",
+      "publisher": "Vercel",
+      "repository": "https://github.com/vercel-labs/agent-skills",
+      "ref": "main",
+      "commit": "b8caa260a420a73042e35521de4b5c8baf6446cc",
+      "license": "MIT-declared-in-README-no-LICENSE-file",
+      "licenseNote": "The pinned README declares MIT; the pinned repository has no standalone LICENSE file.",
+      "submodulePath": "full-sources/official/vercel-agent-skills",
+      "skillCount": 9,
+      "role": "React composition, performance, React Native, design review, and Vercel deployment"
+    },
+    {
+      "id": "microsoft-skills",
+      "publisher": "Microsoft",
+      "repository": "https://github.com/microsoft/skills",
+      "ref": "main",
+      "commit": "e58528db9a006528a5fb0a2c029790fa6a9a7c0e",
+      "license": "MIT",
+      "submodulePath": "full-sources/official/microsoft-skills",
+      "skillCount": 198,
+      "role": "Azure SDKs and operations, Microsoft 365 agents, Fabric, Kusto, documentation, and enterprise application workflows"
+    }
+  ],
+  "officialCatalog": "catalog/official-skills.json",
+  "curatedSources": [
+    {
+      "id": "cyberppt",
+      "publisher": "crazyykhllc-bit",
+      "repository": "https://github.com/crazyykhllc-bit/CyberPPT",
+      "ref": "main",
+      "commit": "980e5576565f0673c67ee41b01d20ed66cb8417c",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/cyberppt",
+      "skillCount": 1,
+      "skillPaths": [
+        "SKILL.md"
+      ],
+      "role": "source-to-consulting-style editable PowerPoint production with rendering QA",
+      "selection": "user-requested"
+    },
+    {
+      "id": "figures4papers",
+      "publisher": "ChenLiu-1996",
+      "repository": "https://github.com/ChenLiu-1996/figures4papers",
+      "ref": "main",
+      "commit": "6790a93af3552539d955d77181c818916e1700b7",
+      "license": "NOASSERTION",
+      "licenseNote": "No license file or explicit repository license was detected at the pinned commit; verify permission before reuse or redistribution.",
+      "submodulePath": "full-sources/curated/figures4papers",
+      "skillCount": 1,
+      "skillPaths": [
+        "scientific-figure-making/SKILL.md"
+      ],
+      "role": "scientific figure design with reusable patterns and examples",
+      "selection": "user-requested"
+    },
+    {
+      "id": "anydoc",
+      "publisher": "Firecrawl",
+      "repository": "https://github.com/firecrawl/anydoc",
+      "ref": "main",
+      "commit": "4e3089b1ed43404241a303109f81e2c7933040b2",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/anydoc",
+      "skillCount": 1,
+      "skillPaths": [
+        "skills/convert-documents-to-markdown/SKILL.md"
+      ],
+      "role": "multi-format document conversion to Markdown",
+      "selection": "one-month-star-velocity",
+      "createdAt": "2026-08-03T16:36:14Z",
+      "starsAtAudit": 15601
+    },
+    {
+      "id": "img2threejs",
+      "publisher": "img2threejs",
+      "repository": "https://github.com/img2threejs/img2threejs",
+      "ref": "main",
+      "commit": "d6673386f89673a58736f8d398dd16ece67874f5",
+      "license": "Apache-2.0",
+      "submodulePath": "full-sources/curated/img2threejs",
+      "skillCount": 1,
+      "skillPaths": [
+        "SKILL.md"
+      ],
+      "role": "quality-gated image-to-procedural-Three.js reconstruction",
+      "selection": "one-month-star-velocity",
+      "createdAt": "2026-07-15T02:58:39Z",
+      "starsAtAudit": 11572
+    },
+    {
+      "id": "video-shotcraft",
+      "publisher": "Vincentwei1021",
+      "repository": "https://github.com/Vincentwei1021/video-shotcraft",
+      "ref": "main",
+      "commit": "41ee360d82f4c491ba9d88a24a4add7d8ff1cf8b",
+      "license": "Apache-2.0",
+      "submodulePath": "full-sources/curated/video-shotcraft",
+      "skillCount": 1,
+      "skillPaths": [
+        "SKILL.md"
+      ],
+      "role": "recipe-based cinematic product-video production and final review",
+      "selection": "one-month-star-velocity",
+      "createdAt": "2026-07-19T11:44:41Z",
+      "starsAtAudit": 4930
+    },
+    {
+      "id": "simple-english",
+      "publisher": "AminBlg",
+      "repository": "https://github.com/AminBlg/SimpleEnglish",
+      "ref": "main",
+      "commit": "59bf6702197a5aadc96d197ea17f290d8d50dcd3",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/simple-english",
+      "skillCount": 1,
+      "skillPaths": [
+        "skills/simple-english/SKILL.md"
+      ],
+      "role": "controlled plain-English rewriting for technical and international audiences",
+      "selection": "one-month-star-velocity",
+      "createdAt": "2026-07-21T10:20:31Z",
+      "starsAtAudit": 2288
+    },
+    {
+      "id": "design-evaluation",
+      "publisher": "SeanJ1ang",
+      "repository": "https://github.com/SeanJ1ang/design-judge-skills",
+      "ref": "main",
+      "commit": "b82286f51bca4d171237e42eb93ad10a8884b833",
+      "license": "Apache-2.0",
+      "submodulePath": "full-sources/curated/design-evaluation",
+      "skillCount": 1,
+      "skillPaths": [
+        "skills/design-evaluation/SKILL.md"
+      ],
+      "role": "transparent evidence-based design classification, scoring, and evaluation",
+      "selection": "one-month-star-velocity",
+      "selectionNote": "Only design-evaluation is cataloged from the seven-skill upstream repository to preserve the exact ten-skill quota.",
+      "createdAt": "2026-07-18T07:27:32Z",
+      "starsAtAudit": 1174
+    },
+    {
+      "id": "qiaomu-seo",
+      "publisher": "joeseesun",
+      "repository": "https://github.com/joeseesun/qiaomu-seo",
+      "ref": "main",
+      "commit": "b892b70639ac2839e7fa61302ff54a60a6cc9b74",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/qiaomu-seo",
+      "skillCount": 1,
+      "skillPaths": [
+        "SKILL.md"
+      ],
+      "role": "evidence-aware technical, content, international, and AI-search SEO",
+      "selection": "one-month-star-velocity",
+      "createdAt": "2026-08-03T09:57:25Z",
+      "starsAtAudit": 364
+    },
+    {
+      "id": "bolt-slides",
+      "publisher": "StackBlitz",
+      "repository": "https://github.com/stackblitz/bolt-slides",
+      "ref": "main",
+      "commit": "53b55bcf365dc2864fac29e7a5594213611142be",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/bolt-slides",
+      "skillCount": 1,
+      "skillPaths": [
+        ".bolt/skills/slides/SKILL.md"
+      ],
+      "role": "responsive React web presentations with navigation and accessibility",
+      "selection": "one-month-star-velocity",
+      "createdAt": "2026-07-14T18:23:27Z",
+      "starsAtAudit": 698,
+      "packagePath": "."
+    },
+    {
+      "id": "sssf",
+      "publisher": "disler",
+      "repository": "https://github.com/disler/super-simple-software-factory",
+      "ref": "main",
+      "commit": "de31374882e7a4e3e5b7bb9bd09e69dc2f779356",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/sssf",
+      "skillCount": 1,
+      "skillPaths": [
+        ".claude/skills/sssf/SKILL.md"
+      ],
+      "role": "repeatable agent-plus-code development workflows with handoffs and observability",
+      "selection": "one-month-star-velocity",
+      "createdAt": "2026-08-02T17:41:00Z",
+      "starsAtAudit": 622
+    },
+    {
+      "id": "trace-file-lineage",
+      "publisher": "uczltw6",
+      "repository": "https://github.com/uczltw6/trace-file-lineage",
+      "ref": "main",
+      "commit": "0293797ea05b7bf1d373679bd4281cf26d5a7cd1",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/trace-file-lineage",
+      "skillCount": 1,
+      "skillPaths": [
+        "skills/trace-file-lineage/SKILL.md"
+      ],
+      "role": "local artifact origin, ancestry, impact, and run-history tracing",
+      "selection": "one-month-star-velocity",
+      "createdAt": "2026-07-29T22:05:47Z",
+      "starsAtAudit": 512
+    },
+    {
+      "id": "high-stakes-analytics",
+      "publisher": "limingrui679-design",
+      "repository": "https://github.com/limingrui679-design/high-stakes-analytics-decision-lab",
+      "ref": "main",
+      "commit": "0b3718c7aac5361f14650e1a4b36f038ae7002a6",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/high-stakes-analytics",
+      "skillCount": 1,
+      "skillPaths": [
+        "SKILL.md"
+      ],
+      "role": "source-backed descriptive through prescriptive analysis for consequential decisions",
+      "selection": "one-month-star-velocity",
+      "createdAt": "2026-07-29T03:06:23Z",
+      "starsAtAudit": 349
+    },
+    {
+      "id": "record-browser-gif",
+      "publisher": "deepseek-ai",
+      "repository": "https://github.com/deepseek-ai/deepseek-harness",
+      "ref": "master",
+      "commit": "47f943859bef60e4160492346772ded9b24f765a",
+      "tree": "f904efab9ef435201d6ba4da88a34d6366568272",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/record-browser-gif",
+      "skillCount": 1,
+      "skillPaths": [
+        ".agents/skills/record-browser-gif/SKILL.md"
+      ],
+      "role": "deterministic browser recording-to-GIF evidence with provenance and visual QA",
+      "selection": "one-month-star-velocity-round-2",
+      "createdAt": "2026-08-13T11:56:32Z",
+      "pushedAt": "2026-08-13T13:00:21Z",
+      "starsAtAudit": 34181
+    },
+    {
+      "id": "popular-web-designs",
+      "publisher": "yc-software",
+      "repository": "https://github.com/yc-software/qm",
+      "ref": "main",
+      "commit": "d719f54075afee4648be75240fa02adb3a9071f0",
+      "tree": "a6cacf3bea83cfb499a545aa75f78b54fcb91544",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/popular-web-designs",
+      "skillCount": 1,
+      "skillPaths": [
+        "skills-seed/popular-web-designs/SKILL.md"
+      ],
+      "role": "54 reusable web-design references with implementation-ready tokens and component patterns",
+      "selection": "one-month-star-velocity-round-2",
+      "createdAt": "2026-07-29T20:03:08Z",
+      "pushedAt": "2026-08-12T23:54:05Z",
+      "starsAtAudit": 13405
+    },
+    {
+      "id": "better-accessibility",
+      "publisher": "trycompai",
+      "repository": "https://github.com/trycompai/crm",
+      "ref": "release",
+      "commit": "f2484fb08d1dd1357c1e3deddb97610cd8e6f1ed",
+      "tree": "0c64dde5c5a8a9127d3f76aabefededbe89391cc",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/better-accessibility",
+      "skillCount": 1,
+      "skillPaths": [
+        ".agents/skills/better-accessibility/SKILL.md"
+      ],
+      "role": "codebase accessibility audit and remediation across semantics, input, focus, motion, and screen readers",
+      "selection": "one-month-star-velocity-round-2",
+      "createdAt": "2026-07-31T21:38:51Z",
+      "pushedAt": "2026-08-13T16:16:46Z",
+      "starsAtAudit": 8382
+    },
+    {
+      "id": "ai-copywriter",
+      "publisher": "mikiarlo3",
+      "repository": "https://github.com/mikiarlo3/ai-copywriter",
+      "ref": "claude/humanizer-copywriting-skill-u5x4vd",
+      "commit": "08b53b1ad39887cd94cbaab61cac3b6aae2d8518",
+      "tree": "47bdf74bb03ae7a1b67aa5aba02aa934fb627d3c",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/ai-copywriter",
+      "skillCount": 1,
+      "skillPaths": [
+        "SKILL.md"
+      ],
+      "role": "honest reader-first marketing copy, microcopy, and natural-language editing with anti-fabrication checks",
+      "selection": "one-month-star-velocity-round-2",
+      "createdAt": "2026-07-24T19:52:13Z",
+      "pushedAt": "2026-08-01T16:30:08Z",
+      "starsAtAudit": 971
+    },
+    {
+      "id": "bento-slides",
+      "publisher": "nyblnet",
+      "repository": "https://github.com/nyblnet/bento",
+      "ref": "main",
+      "commit": "efc0fab48ed1a9531bb1ae2a652a091832f64254",
+      "tree": "1a13542c2daaec522b1e292a4d075eab730317d0",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/bento-slides",
+      "skillCount": 1,
+      "skillPaths": [
+        "plugins/bento-slides/skills/bento-slides/SKILL.md"
+      ],
+      "role": "interactive HTML slide production with runtime validation, rendering, and optional publishing",
+      "selection": "one-month-star-velocity-round-2",
+      "createdAt": "2026-07-17T16:55:09Z",
+      "pushedAt": "2026-08-12T23:42:55Z",
+      "starsAtAudit": 3974
+    },
+    {
+      "id": "change-traceability-review",
+      "publisher": "QoderAI",
+      "repository": "https://github.com/QoderAI/better-harness",
+      "ref": "main",
+      "commit": "9fd12f274c0906e7004898b1e525454ec58ca6aa",
+      "tree": "bcecace1b6b7c313458b56a165f54861fe6ab39c",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/change-traceability-review",
+      "skillCount": 1,
+      "skillPaths": [
+        ".agents/skills/change-traceability-review/SKILL.md"
+      ],
+      "role": "evidence-based change review against issue, specification, and commit intent",
+      "selection": "one-month-star-velocity-round-2",
+      "createdAt": "2026-07-21T12:30:35Z",
+      "pushedAt": "2026-08-13T15:45:32Z",
+      "starsAtAudit": 1828
+    },
+    {
+      "id": "oil-motion",
+      "publisher": "oil-oil",
+      "repository": "https://github.com/oil-oil/oil-motion",
+      "ref": "main",
+      "commit": "3e145be06f0690ff6cd7c0adb224d0c9f324abba",
+      "tree": "47a71781ff1540719e3ffbe6a971a6bd73510c06",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/oil-motion",
+      "skillCount": 1,
+      "skillPaths": [
+        "SKILL.md"
+      ],
+      "role": "web-motion concept, implementation, QA, optimization, and multi-format delivery",
+      "selection": "one-month-star-velocity-round-2",
+      "createdAt": "2026-08-07T12:36:33Z",
+      "pushedAt": "2026-08-09T11:49:57Z",
+      "starsAtAudit": 1675
+    },
+    {
+      "id": "novel-outline",
+      "publisher": "eternityspring",
+      "repository": "https://github.com/eternityspring/shuohao-skills",
+      "ref": "main",
+      "commit": "04aa3005da04e7611ea027a2976a7152efa89c33",
+      "tree": "968fe7248da3d247e1bce5d3bb6311e3931b0213",
+      "license": "Apache-2.0",
+      "submodulePath": "full-sources/curated/novel-outline",
+      "skillCount": 1,
+      "skillPaths": [
+        "skills/novel-outline/SKILL.md"
+      ],
+      "role": "hierarchical long-form novel outlining with validation, assembly, and visual reports",
+      "selection": "one-month-star-velocity-round-2",
+      "createdAt": "2026-08-06T10:38:49Z",
+      "pushedAt": "2026-08-13T11:32:25Z",
+      "starsAtAudit": 1282
+    },
+    {
+      "id": "story-to-handdrawn-video",
+      "publisher": "gnipbao",
+      "repository": "https://github.com/gnipbao/story-to-handdrawn-video",
+      "ref": "main",
+      "commit": "fbab5b27f4f0db61739d86f78000a39eeaa692d3",
+      "tree": "cf9f43303443f1eded13479db0239bfadfb8acb4",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/story-to-handdrawn-video",
+      "skillCount": 1,
+      "skillPaths": [
+        "skill-package/story-to-handdrawn-video/SKILL.md"
+      ],
+      "role": "hand-drawn story-video production with storyboard validation and a 20-style reference library",
+      "selection": "one-month-star-velocity-round-2",
+      "createdAt": "2026-07-21T08:54:45Z",
+      "pushedAt": "2026-08-08T09:31:37Z",
+      "starsAtAudit": 1357,
+      "packagePath": "."
+    },
+    {
+      "id": "human-review",
+      "publisher": "petergyang",
+      "repository": "https://github.com/petergyang/human-review",
+      "ref": "main",
+      "commit": "64deff14506cfc18d542d28fb7b7e0ac98c0c459",
+      "tree": "3b5ff09c169658b1e52fd1f7f486bc8196c1665a",
+      "license": "MIT",
+      "submodulePath": "full-sources/curated/human-review",
+      "skillCount": 1,
+      "skillPaths": [
+        "src/SKILL.md"
+      ],
+      "role": "localhost browser review loop with structured comments, edits, and agent feedback polling",
+      "selection": "one-month-star-velocity-round-2",
+      "createdAt": "2026-07-27T14:58:36Z",
+      "pushedAt": "2026-08-08T04:21:54Z",
+      "starsAtAudit": 943,
+      "packagePath": "."
+    }
+  ],
+  "curatedTrendAudit": {
+    "window": "2026-07-14 through 2026-08-14",
+    "auditedAt": "2026-08-14",
+    "method": "GitHub repository API metadata and recursive-tree audit. Every velocity selection was created inside the audit window, so starsAtAudit is a conservative lower-bound measure of stars acquired within that month.",
+    "selectedSkillCount": 10,
+    "licensePolicy": "Only permissively licensed finalists were selected; a PolyForm Noncommercial candidate was excluded.",
+    "catalog": "catalog/curated-skills.json"
+  },
+  "curatedTrendAuditRound2": {
+    "window": "2026-07-14 through 2026-08-14",
+    "auditedAt": "2026-08-14",
+    "query": "GitHub repositories created in the audit window with at least 100 stars, sorted by stars",
+    "candidateRepositoryCount": 1323,
+    "auditedSkillFileCount": 232,
+    "method": "GitHub repository metadata, declared-license filtering, recursive-tree inspection, exact SKILL.md blob review, package-boundary review, dependency/security review, and byte-level de-duplication against the existing compact and curated layers. Every finalist was created inside the audit window, so starsAtAudit is a conservative lower-bound measure of stars acquired within that month.",
+    "selectedSkillCount": 10,
+    "observedStarsTotal": 67998,
+    "licensePolicy": "Only finalists with permissive GitHub-declared licenses were selected (nine MIT and one Apache-2.0); anti-detection and provenance-stripping candidates were excluded.",
+    "catalog": "catalog/curated-skills.json",
+    "additionalityPolicy": "Each selected SKILL.md must be byte-distinct from the existing compact layer, the user-requested curated entries, round one, and every other round-two selection."
+  },
+  "curatedCatalog": "catalog/curated-skills.json"
+}

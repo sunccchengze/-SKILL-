@@ -1,0 +1,23 @@
+{
+  "name": "literature-evidence",
+  "description": "Search, lawful full text, PDF, citation, evidence extraction and synthesis.",
+  "risk": "database/API access and citation support still require verification",
+  "skillIds": [
+    "research-workflow-kit::research-workflow-orchestrator",
+    "research-workflow-kit::research-question-protocol",
+    "research-workflow-kit::systematic-evidence-synthesis",
+    "research-workflow-kit::academic-integrity-ai-disclosure",
+    "scientific-agent-skills::skills/paper-lookup",
+    "scientific-agent-skills::skills/citation-management",
+    "scientific-agent-skills::skills/literature-review",
+    "scientific-agent-skills::skills/pyzotero",
+    "nature-skills::skills/nature-academic-search",
+    "nature-skills::skills/nature-literature-pipeline",
+    "nature-skills::skills/nature-paper-card",
+    "nature-skills::skills/nature-reader",
+    "nature-skills::skills/nature-ref-verifier",
+    "nature-skills::skills/nature-downloader",
+    "openai-skills::skills/.curated/pdf",
+    "openai-skills::skills/.curated/notion-research-documentation"
+  ]
+}

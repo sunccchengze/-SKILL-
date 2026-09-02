@@ -1,0 +1,17 @@
+{
+  "name": "qualitative-mixed",
+  "description": "Authorized, de-identified qualitative and mixed-methods research.",
+  "risk": "human interpretation, consent, privacy and ethics approval required",
+  "skillIds": [
+    "research-workflow-kit::research-workflow-orchestrator",
+    "research-workflow-kit::research-question-protocol",
+    "research-workflow-kit::systematic-evidence-synthesis",
+    "research-workflow-kit::qualitative-mixed-methods",
+    "research-workflow-kit::academic-integrity-ai-disclosure",
+    "scientific-agent-skills::skills/literature-review",
+    "scientific-agent-skills::skills/citation-management",
+    "scientific-agent-skills::skills/scientific-writing",
+    "scientific-agent-skills::skills/peer-review",
+    "openai-skills::skills/.curated/pdf"
+  ]
+}

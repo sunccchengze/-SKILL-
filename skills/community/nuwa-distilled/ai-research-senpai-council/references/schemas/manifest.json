@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "json_schema_draft": "https://json-schema.org/draft/2020-12/schema",
+  "mappings": [
+    {
+      "data_file": "references/knowledge/creators.json",
+      "schema_file": "references/schemas/creators.schema.json",
+      "format": "json-document"
+    },
+    {
+      "data_file": "references/knowledge/claims.jsonl",
+      "schema_file": "references/schemas/claim-record.schema.json",
+      "format": "jsonl-record"
+    },
+    {
+      "data_file": "references/sources/sources.jsonl",
+      "schema_file": "references/schemas/source-record.schema.json",
+      "format": "jsonl-record"
+    },
+    {
+      "data_file": "references/sources/false-positives.json",
+      "schema_file": "references/schemas/false-positives.schema.json",
+      "format": "json-document"
+    },
+    {
+      "data_file": "references/governance/routing.json",
+      "schema_file": "references/schemas/routing.schema.json",
+      "format": "json-document"
+    },
+    {
+      "data_file": "references/governance/disagreements.jsonl",
+      "schema_file": "references/schemas/disagreement-record.schema.json",
+      "format": "jsonl-record"
+    },
+    {
+      "data_file": "references/governance/commercial-conflicts.jsonl",
+      "schema_file": "references/schemas/commercial-conflict-record.schema.json",
+      "format": "jsonl-record"
+    },
+    {
+      "data_file": "references/governance/integrity-rules.json",
+      "schema_file": "references/schemas/integrity-rules.schema.json",
+      "format": "json-document"
+    }
+  ]
+}
