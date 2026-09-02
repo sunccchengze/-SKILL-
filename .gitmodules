@@ -1,0 +1,174 @@
+[submodule "full-sources/aggregate-turbine"]
+	path = full-sources/aggregate-turbine
+	url = https://github.com/sunccchengze/turbine-blade-ai-platform.git
+	branch = arena/019feb03-turbine-blade-ai-platform
+[submodule "full-sources/aggregate-wind"]
+	path = full-sources/aggregate-wind
+	url = https://github.com/sunccchengze/wind_farm_viz.git
+	branch = arena/019feb53-wind-farm-viz
+[submodule "full-sources/aggregate-repo"]
+	path = full-sources/aggregate-repo
+	url = https://github.com/sunccchengze/-.git
+	branch = arena/019ff697-repo
+[submodule "full-sources/human-writing"]
+	path = full-sources/human-writing
+	url = https://github.com/KKKKhazix/human-writing.git
+	branch = main
+[submodule "full-sources/victor-design"]
+	path = full-sources/victor-design
+	url = https://github.com/victorzhang016-code/victor-design.git
+	branch = main
+[submodule "full-sources/openwiki"]
+	path = full-sources/openwiki
+	url = https://github.com/langchain-ai/openwiki.git
+	branch = main
+[submodule "full-sources/screencoder"]
+	path = full-sources/screencoder
+	url = https://github.com/leigest519/ScreenCoder.git
+	branch = main
+[submodule "full-sources/research/academic-research-skills"]
+	path = full-sources/research/academic-research-skills
+	url = https://github.com/Imbad0202/academic-research-skills.git
+	branch = main
+[submodule "full-sources/research/academic-research-skills-codex"]
+	path = full-sources/research/academic-research-skills-codex
+	url = https://github.com/Imbad0202/academic-research-skills-codex.git
+	branch = main
+[submodule "full-sources/research/nature-skills"]
+	path = full-sources/research/nature-skills
+	url = https://github.com/Yuan1z0825/nature-skills.git
+	branch = main
+[submodule "full-sources/research/scientific-agent-skills"]
+	path = full-sources/research/scientific-agent-skills
+	url = https://github.com/K-Dense-AI/scientific-agent-skills.git
+	branch = main
+[submodule "full-sources/research/aris"]
+	path = full-sources/research/aris
+	url = https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep.git
+	branch = main
+[submodule "full-sources/research/ai-research-skills"]
+	path = full-sources/research/ai-research-skills
+	url = https://github.com/Orchestra-Research/AI-Research-SKILLs.git
+	branch = main
+[submodule "full-sources/research/research-paper-writing-skills"]
+	path = full-sources/research/research-paper-writing-skills
+	url = https://github.com/Master-cai/Research-Paper-Writing-Skills.git
+	branch = main
+[submodule "full-sources/research/paperspine"]
+	path = full-sources/research/paperspine
+	url = https://github.com/WUBING2023/PaperSpine.git
+	branch = main
+[submodule "full-sources/research/paper-craft-skills"]
+	path = full-sources/research/paper-craft-skills
+	url = https://github.com/zsyggg/paper-craft-skills.git
+	branch = main
+[submodule "full-sources/research/hermes-agent"]
+	path = full-sources/research/hermes-agent
+	url = https://github.com/NousResearch/hermes-agent.git
+	branch = main
+[submodule "full-sources/research/hamelnb"]
+	path = full-sources/research/hamelnb
+	url = https://github.com/hamelsmu/hamelnb.git
+	branch = main
+[submodule "official-openai-skills"]
+	path = full-sources/official/openai-skills
+	url = https://github.com/openai/skills.git
+[submodule "official-vercel-agent-skills"]
+	path = full-sources/official/vercel-agent-skills
+	url = https://github.com/vercel-labs/agent-skills.git
+[submodule "official-microsoft-skills"]
+	path = full-sources/official/microsoft-skills
+	url = https://github.com/microsoft/skills.git
+[submodule "full-sources/official/openai-plugins"]
+	path = full-sources/official/openai-plugins
+	url = https://github.com/openai/plugins.git
+[submodule "full-sources/curated/cyberppt"]
+	path = full-sources/curated/cyberppt
+	url = https://github.com/crazyykhllc-bit/CyberPPT.git
+[submodule "full-sources/curated/figures4papers"]
+	path = full-sources/curated/figures4papers
+	url = https://github.com/ChenLiu-1996/figures4papers.git
+[submodule "full-sources/curated/anydoc"]
+	path = full-sources/curated/anydoc
+	url = https://github.com/firecrawl/anydoc.git
+[submodule "full-sources/curated/img2threejs"]
+	path = full-sources/curated/img2threejs
+	url = https://github.com/img2threejs/img2threejs.git
+[submodule "full-sources/curated/video-shotcraft"]
+	path = full-sources/curated/video-shotcraft
+	url = https://github.com/Vincentwei1021/video-shotcraft.git
+[submodule "full-sources/curated/simple-english"]
+	path = full-sources/curated/simple-english
+	url = https://github.com/AminBlg/SimpleEnglish.git
+[submodule "full-sources/curated/design-evaluation"]
+	path = full-sources/curated/design-evaluation
+	url = https://github.com/SeanJ1ang/design-judge-skills.git
+[submodule "full-sources/curated/qiaomu-seo"]
+	path = full-sources/curated/qiaomu-seo
+	url = https://github.com/joeseesun/qiaomu-seo.git
+[submodule "full-sources/curated/bolt-slides"]
+	path = full-sources/curated/bolt-slides
+	url = https://github.com/stackblitz/bolt-slides.git
+[submodule "full-sources/curated/sssf"]
+	path = full-sources/curated/sssf
+	url = https://github.com/disler/super-simple-software-factory.git
+[submodule "full-sources/curated/trace-file-lineage"]
+	path = full-sources/curated/trace-file-lineage
+	url = https://github.com/uczltw6/trace-file-lineage.git
+[submodule "full-sources/curated/high-stakes-analytics"]
+	path = full-sources/curated/high-stakes-analytics
+	url = https://github.com/limingrui679-design/high-stakes-analytics-decision-lab.git
+[submodule "curated-record-browser-gif"]
+	path = full-sources/curated/record-browser-gif
+	url = https://github.com/deepseek-ai/deepseek-harness
+[submodule "curated-popular-web-designs"]
+	path = full-sources/curated/popular-web-designs
+	url = https://github.com/yc-software/qm
+[submodule "curated-better-accessibility"]
+	path = full-sources/curated/better-accessibility
+	url = https://github.com/trycompai/crm
+[submodule "curated-bento-slides"]
+	path = full-sources/curated/bento-slides
+	url = https://github.com/nyblnet/bento
+[submodule "curated-change-traceability-review"]
+	path = full-sources/curated/change-traceability-review
+	url = https://github.com/QoderAI/better-harness
+[submodule "curated-oil-motion"]
+	path = full-sources/curated/oil-motion
+	url = https://github.com/oil-oil/oil-motion
+[submodule "curated-novel-outline"]
+	path = full-sources/curated/novel-outline
+	url = https://github.com/eternityspring/shuohao-skills
+[submodule "curated-story-to-handdrawn-video"]
+	path = full-sources/curated/story-to-handdrawn-video
+	url = https://github.com/gnipbao/story-to-handdrawn-video
+[submodule "curated-human-review"]
+	path = full-sources/curated/human-review
+	url = https://github.com/petergyang/human-review
+[submodule "curated-ai-copywriter"]
+	path = full-sources/curated/ai-copywriter
+	url = https://github.com/mikiarlo3/ai-copywriter
+[submodule "full-sources/tools/opencut"]
+	path = full-sources/tools/opencut
+	url = https://github.com/OpenCut-app/OpenCut.git
+	branch = main
+[submodule "full-sources/tools/rustdesk"]
+	path = full-sources/tools/rustdesk
+	url = https://github.com/rustdesk/rustdesk.git
+	branch = master
+[submodule "full-sources/tools/spec-kit"]
+	path = full-sources/tools/spec-kit
+	url = https://github.com/github/spec-kit.git
+	branch = main
+[submodule "full-sources/official/voltagent-awesome-agent-skills"]
+	path = full-sources/official/voltagent-awesome-agent-skills
+	url = https://github.com/VoltAgent/awesome-agent-skills.git
+[submodule "full-sources/official/antigravity-awesome-skills"]
+	path = full-sources/official/antigravity-awesome-skills
+	url = https://github.com/sickn33/antigravity-awesome-skills.git
+[submodule "full-sources/official/wondelai-skills"]
+	path = full-sources/official/wondelai-skills
+	url = https://github.com/wondelai/skills.git
+[submodule "full-sources/official/agent-rules-books"]
+	path = full-sources/official/agent-rules-books
+	url = https://github.com/ciembor/agent-rules-books.git

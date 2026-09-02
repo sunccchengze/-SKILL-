@@ -1,0 +1,90 @@
+{
+  "formatVersion": 1,
+  "generatedAt": "2026-08-16",
+  "rawCatalogEntries": 3784,
+  "defaultVisibleEntries": 3126,
+  "starterBundleEntries": 100,
+  "byTier": {
+    "community": 1584,
+    "curated-source": 22,
+    "full-source": 654,
+    "maintained": 23,
+    "official-source": 840,
+    "router": 1,
+    "tool-bundled": 2
+  },
+  "categories": [
+    {
+      "id": "agents-orchestration",
+      "displayName": "Agent 与编排",
+      "description": "路由、计划、上下文、记忆、评估、多 Agent 协作与工作流治理。",
+      "count": 384,
+      "starterCount": 11,
+      "index": "categories/agents-orchestration/skills.tsv"
+    },
+    {
+      "id": "engineering-code",
+      "displayName": "工程与代码",
+      "description": "架构、编码、测试、调试、评审、Git、CI/CD、API、前后端与性能。",
+      "count": 767,
+      "starterCount": 24,
+      "index": "categories/engineering-code/skills.tsv"
+    },
+    {
+      "id": "documents-data",
+      "displayName": "文档与数据",
+      "description": "PDF、结构化文档、表格、数据库、数据清洗、分析与可追踪交付。",
+      "count": 175,
+      "starterCount": 6,
+      "index": "categories/documents-data/skills.tsv"
+    },
+    {
+      "id": "research-science",
+      "displayName": "研究与科学",
+      "description": "检索、综述、引用、实验、统计、科学计算、论文、同行评审与复现。",
+      "count": 806,
+      "starterCount": 9,
+      "index": "categories/research-science/skills.tsv"
+    },
+    {
+      "id": "writing-content",
+      "displayName": "写作与内容",
+      "description": "中文与英文写作、编辑、内容研究、技术表达、营销文案与去模板化。",
+      "count": 88,
+      "starterCount": 15,
+      "index": "categories/writing-content/skills.tsv"
+    },
+    {
+      "id": "design-media",
+      "displayName": "设计与媒体",
+      "description": "产品/UI/UX、视觉系统、网页、演示、图像、视频、动效与媒体生产。",
+      "count": 308,
+      "starterCount": 12,
+      "index": "categories/design-media/skills.tsv"
+    },
+    {
+      "id": "business-strategy",
+      "displayName": "商业与战略",
+      "description": "产品、市场、营销、定价、竞争、运营、决策、发布与组织协作。",
+      "count": 165,
+      "starterCount": 11,
+      "index": "categories/business-strategy/skills.tsv"
+    },
+    {
+      "id": "security-compliance",
+      "displayName": "安全、隐私与合规",
+      "description": "安全评审、威胁与风险、隐私、无障碍、依赖、审计和合规治理。",
+      "count": 147,
+      "starterCount": 7,
+      "index": "categories/security-compliance/skills.tsv"
+    },
+    {
+      "id": "general",
+      "displayName": "通用生产力",
+      "description": "跨领域计划、沟通、会议、通用工具、个人效率与难以单归一域的能力。",
+      "count": 286,
+      "starterCount": 5,
+      "index": "categories/general/skills.tsv"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ars-noncommercial",
+  "description": "Academic Research Skills and Codex adapter under CC BY-NC 4.0.",
+  "risk": "non-commercial license; adapter commands require compatible Codex setup",
+  "skillIds": [
+    "research-workflow-kit::research-workflow-orchestrator",
+    "research-workflow-kit::research-question-protocol",
+    "research-workflow-kit::systematic-evidence-synthesis",
+    "research-workflow-kit::academic-integrity-ai-disclosure",
+    "academic-research-skills::academic-paper",
+    "academic-research-skills::academic-paper-reviewer",
+    "academic-research-skills::academic-pipeline",
+    "academic-research-skills-codex::skills/academic-research-suite",
+    "academic-research-skills::deep-research"
+  ]
+}

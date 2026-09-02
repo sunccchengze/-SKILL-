@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sunccchengze/-SKILL-/schemas/ai-research-senpai-council/false-positives.schema.json",
+  "title": "AI Research Senpai Council attribution exclusions",
+  "type": "object",
+  "required": ["schema_version", "checked_at", "exclusions"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "checked_at": {"type": "string", "format": "date"},
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["platform", "content_id", "url", "incorrect_attribution", "decision", "reason"],
+        "properties": {
+          "platform": {"enum": ["youtube", "bilibili", "xiaohongshu"]},
+          "content_id": {"type": "string", "minLength": 1},
+          "url": {"type": "string", "format": "uri", "pattern": "^https://"},
+          "incorrect_attribution": {
+            "oneOf": [{"type": "string", "minLength": 1}, {"type": "null"}]
+          },
+          "decision": {"enum": ["exclude", "metadata_only_not_claim_evidence"]},
+          "reason": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

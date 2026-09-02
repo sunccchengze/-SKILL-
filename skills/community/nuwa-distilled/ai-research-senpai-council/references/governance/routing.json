@@ -1,0 +1,248 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-08-16",
+  "default_language": "zh-CN",
+  "selection_policy": {
+    "max_primary_advisors": 2,
+    "max_total_advisors": 4,
+    "prefer": [
+      "active status",
+      "direct creator transcript or creator-authored outline",
+      "high confidence",
+      "specific topic match"
+    ],
+    "diversity_rule": "有多个同等相关且证据足够的创作者时，优先覆盖至少两位；不得为凑多样性而提升低质量证据。",
+    "weak_evidence_rule": "只有标题、简介、二手摘要或暂定转述时，必须在回答正文紧邻建议处标注，不得升级为步骤级结论。",
+    "general_advice_rule": "创作者语料不足时先明确“联合体语料未覆盖”，再以“通用科研建议”单独给出，不伪装成任何成员观点。",
+    "conflict_rule": "命中 disagreements.jsonl 时先并列观点与适用条件，再给条件化选择；不得捏造共识。",
+    "commercial_rule": "引用存在销售、联盟或行业关联的成员时，按 commercial-conflicts.jsonl 在同一回答中披露。",
+    "integrity_rule": "任何完整请求或子请求命中 integrity-rules.json 的 forbidden 类别时拒绝危险部分；不得让合法部分掩盖违规意图。"
+  },
+  "routes": [
+    {
+      "route_id": "ai-workflow",
+      "intents": [
+        "AI科研工具",
+        "智能体",
+        "MCP",
+        "多文档问答",
+        "自动化",
+        "工作流"
+      ],
+      "primary": [
+        "he-jing",
+        "andy-stapleton"
+      ],
+      "secondary": [
+        "amina-yonis",
+        "yang-shixiong",
+        "mai-xiaozhe"
+      ],
+      "notes": "何静适合架构、安全与复用；Andy适合工具分工；Amina适合文献链路。杨师兄和麦小哲多为简介级证据。"
+    },
+    {
+      "route_id": "literature",
+      "intents": [
+        "检索",
+        "读论文",
+        "文献综述",
+        "证据筛选",
+        "研究空白",
+        "引文核验"
+      ],
+      "primary": [
+        "amina-yonis",
+        "james-hayton"
+      ],
+      "secondary": [
+        "andy-stapleton",
+        "zoey",
+        "mai-xiaozhe",
+        "li-mu"
+      ],
+      "notes": "Amina覆盖检索与核验，James覆盖综述叙事，Andy覆盖发现与映射。Zoey暂定、麦小哲标题级、李沐三步法不可展开。"
+    },
+    {
+      "route_id": "writing",
+      "intents": [
+        "论文写作",
+        "引言",
+        "提纲",
+        "论证",
+        "写作卡住",
+        "英文论文"
+      ],
+      "primary": [
+        "james-hayton",
+        "amina-yonis"
+      ],
+      "secondary": [
+        "academic-english-now",
+        "zoey"
+      ],
+      "notes": "James负责结构与写作训练，Amina负责从文献到提纲，AEN只用于有直接证据的工作环境与日程安排。"
+    },
+    {
+      "route_id": "research-design",
+      "intents": [
+        "研究问题",
+        "选题",
+        "创新点",
+        "AI时代方向",
+        "研究计划"
+      ],
+      "primary": [
+        "amina-yonis",
+        "tara-brabazon"
+      ],
+      "secondary": [
+        "li-mu",
+        "zoey"
+      ],
+      "notes": "李沐四方向只有二手步骤级内容；Zoey为暂定转述。"
+    },
+    {
+      "route_id": "qualitative",
+      "intents": [
+        "质性研究",
+        "访谈",
+        "编码",
+        "主题分析",
+        "矛盾资料"
+      ],
+      "primary": [
+        "kriukow"
+      ],
+      "secondary": [
+        "he-jing"
+      ],
+      "notes": "Kriukow仅限方法建议；其检测规避内容永久隔离。涉及敏感访谈数据时优先隐私与伦理。"
+    },
+    {
+      "route_id": "methods-data",
+      "intents": [
+        "研究方法",
+        "数据分析",
+        "可复现",
+        "版本管理",
+        "研究数据安全"
+      ],
+      "primary": [
+        "he-jing"
+      ],
+      "secondary": [
+        "andy-stapleton",
+        "kriukow"
+      ],
+      "notes": "通用方法学覆盖有限；若不是质性或AI工作流，应声明语料不足并转入通用建议。"
+    },
+    {
+      "route_id": "publishing",
+      "intents": [
+        "发表规划",
+        "从论文拆文章",
+        "年度发表计划",
+        "投稿"
+      ],
+      "primary": [
+        "tara-brabazon"
+      ],
+      "secondary": [
+        "james-hayton"
+      ],
+      "notes": "AEN保证Q1和杨师兄“可投稿级”主张仅作风险提醒，不作为路线。"
+    },
+    {
+      "route_id": "supervision",
+      "intents": [
+        "导师沟通",
+        "向上管理",
+        "选导师",
+        "冲突"
+      ],
+      "primary": [
+        "simin"
+      ],
+      "secondary": [
+        "tara-brabazon"
+      ],
+      "notes": "思敏只有主题级证据，不能编造具体话术；大多数情形需要单列通用科研建议。"
+    },
+    {
+      "route_id": "productivity",
+      "intents": [
+        "拖延",
+        "专注",
+        "时间管理",
+        "年度计划",
+        "写作计划"
+      ],
+      "primary": [
+        "tara-brabazon",
+        "academic-english-now"
+      ],
+      "secondary": [
+        "james-hayton",
+        "he-jing"
+      ],
+      "notes": "AEN的4小时22分钟只是个人案例；不得变成速度标准。"
+    },
+    {
+      "route_id": "wellbeing",
+      "intents": [
+        "焦虑",
+        "倦怠",
+        "生活边界",
+        "博士压力",
+        "身心健康"
+      ],
+      "primary": [
+        "zoey",
+        "simin"
+      ],
+      "secondary": [
+        "james-hayton"
+      ],
+      "notes": "Zoey为暂定转述、思敏为标题级；明确证据边界。危机或医疗问题应建议联系当地专业支持。"
+    },
+    {
+      "route_id": "career",
+      "intents": [
+        "是否读博",
+        "博士毕业",
+        "学术职业",
+        "发表与毕业权衡"
+      ],
+      "primary": [
+        "tara-brabazon"
+      ],
+      "secondary": [
+        "zoey",
+        "simin"
+      ],
+      "notes": "制度差异很大；询问国家、项目规则与个人目标，避免把个体经验普遍化。"
+    },
+    {
+      "route_id": "integrity",
+      "intents": [
+        "引用核验",
+        "AI披露",
+        "隐私",
+        "抄袭",
+        "代写",
+        "检测规避",
+        "保证发表"
+      ],
+      "primary": [
+        "he-jing",
+        "amina-yonis"
+      ],
+      "secondary": [
+        "andy-stapleton",
+        "kriukow",
+        "academic-english-now"
+      ],
+      "notes": "后三者只可作为风险来源，不得路由其被隔离内容为建议。"
+    }
+  ]
+}

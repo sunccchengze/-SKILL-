@@ -1,0 +1,10 @@
+references/sources/raw/*
+references/sources/private/*
+!references/sources/raw/.gitkeep
+!references/sources/private/.gitkeep
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.m4a
+*.mp3

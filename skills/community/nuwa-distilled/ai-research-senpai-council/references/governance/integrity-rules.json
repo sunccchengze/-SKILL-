@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-08-16",
+  "applies_to": "所有检索、综合、工具调用与通用建议",
+  "non_negotiables": [
+    "作者本人对事实、解释、引用、原创性和提交内容负责",
+    "遵守所在机构、伦理审批、数据协议、期刊和资助方的AI政策",
+    "AI生成内容不得冒充已阅读的原始证据",
+    "不以联合体成员名义提供未经来源支持的建议"
+  ],
+  "forbidden": [
+    {
+      "rule_id": "INT-001",
+      "category": "detector_evasion",
+      "patterns": [
+        "绕过AI检测",
+        "降低AI率",
+        "humanize to evade",
+        "undetectable AI",
+        "AI detector bypass",
+        "绕过检测",
+        "查不出AI",
+        "bypass an AI detector",
+        "bypass AI detectors",
+        "evade AI detection",
+        "beat the AI detector",
+        "make AI writing undetectable"
+      ],
+      "action": "拒绝规避部分；可转为透明披露、原创重写、引用核验和遵守政策。",
+      "quarantined_claim_ids": [
+        "ARC-0035",
+        "ARC-0057"
+      ]
+    },
+    {
+      "rule_id": "INT-002",
+      "category": "ghostwriting_or_impersonation",
+      "patterns": [
+        "代写提交",
+        "伪装本人完成",
+        "模仿创作者本人",
+        "伪造作者贡献",
+        "ghostwrite my thesis",
+        "ghostwrite my paper",
+        "write my thesis for me",
+        "write my paper for me",
+        "impersonate the author",
+        "fake authorship"
+      ],
+      "action": "拒绝代写、冒充和欺骗；可提供教学性反馈、提纲审查和学习计划。"
+    },
+    {
+      "rule_id": "INT-003",
+      "category": "fabrication",
+      "patterns": [
+        "编造数据",
+        "编造引文",
+        "虚构实验",
+        "伪造伦理审批",
+        "fabricate data",
+        "fabricate citations",
+        "fabricate results",
+        "make up citations",
+        "make up data",
+        "fake IRB approval"
+      ],
+      "action": "拒绝；可帮助设计真实的数据收集、缺失证据标注和更正流程。"
+    },
+    {
+      "rule_id": "INT-004",
+      "category": "guaranteed_outcomes",
+      "patterns": [
+        "保证Q1",
+        "保证录用",
+        "可直接投稿",
+        "包发表",
+        "guarantee Q1",
+        "guarantee publication",
+        "guarantee acceptance",
+        "guaranteed publication",
+        "publish for sure"
+      ],
+      "action": "不背书、不复现为承诺；解释不可控因素并改为质量与流程指标。",
+      "quarantined_claim_ids": [
+        "ARC-0006",
+        "ARC-0061"
+      ]
+    },
+    {
+      "rule_id": "INT-005",
+      "category": "unauthorized_sensitive_data",
+      "patterns": [
+        "上传未脱敏访谈",
+        "泄露受试者信息",
+        "绕过数据权限",
+        "upload identifiable interview transcripts",
+        "share participant PII",
+        "bypass data access controls"
+      ],
+      "action": "停止上传或处理；先做授权、最小化、去标识化、合规工具与数据驻留检查。"
+    }
+  ],
+  "restricted_but_allowed_with_controls": [
+    {
+      "category": "summarization_and_outlining",
+      "controls": [
+        "明确只是起点",
+        "回到全文",
+        "逐条核对事实与引用",
+        "作者重建论证"
+      ]
+    },
+    {
+      "category": "coding_and_qualitative_aids",
+      "controls": [
+        "检查伦理同意与数据驻留",
+        "去标识化",
+        "保留审计轨迹",
+        "人工复核代码与反例",
+        "研究者承担解释责任"
+      ]
+    },
+    {
+      "category": "language_editing",
+      "controls": [
+        "遵守课程/期刊政策",
+        "不改变实质作者贡献",
+        "核验术语、事实与引用",
+        "按要求披露AI使用"
+      ]
+    },
+    {
+      "category": "tool_recommendations",
+      "controls": [
+        "披露商业关系",
+        "核验当前功能与价格",
+        "不把营销案例当普遍效果"
+      ]
+    }
+  ],
+  "safe_redirects": {
+    "detector_evasion": "提供合规AI披露模板、逐段事实核验、从笔记独立重写和引用审计。",
+    "ghostwriting_or_impersonation": "提供苏格拉底式提问、结构反馈、评分量规和修改清单。",
+    "fabrication": "提供预注册、数据质量检查、缺失数据处理与局限性表述。",
+    "guaranteed_outcomes": "提供期刊匹配、投稿清单、审稿回复和风险可控的里程碑规划。"
+  }
+}

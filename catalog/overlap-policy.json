@@ -1,0 +1,288 @@
+{
+  "formatVersion": 1,
+  "policy": {
+    "mode": "catalog-alias-suppression",
+    "defaultSearch": "canonical records only",
+    "installation": "canonical by default; aliases remain addressable with --source or --path",
+    "sourcePreservation": "pinned upstream repositories and raw source catalogs remain complete"
+  },
+  "count": 45,
+  "byReason": {
+    "packaging-duplicate": 16,
+    "equivalent-instruction-body": 12,
+    "superseded-source": 16,
+    "host-specific-alias": 1
+  },
+  "aliases": [
+    {
+      "path": "full-sources/research/academic-research-skills-codex/plugins/ars-codex/skills/academic-research-suite/SKILL.md",
+      "canonicalPath": "full-sources/research/academic-research-skills-codex/skills/academic-research-suite/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/research/aris/skills/skills-codex/embodiment-description/SKILL.md",
+      "canonicalPath": "full-sources/research/aris/skills/embodiment-description/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/research/aris/skills/skills-codex/figure-description/SKILL.md",
+      "canonicalPath": "full-sources/research/aris/skills/figure-description/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/research/aris/skills/skills-codex/formula-derivation/SKILL.md",
+      "canonicalPath": "full-sources/research/aris/skills/formula-derivation/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/research/aris/skills/skills-codex/jurisdiction-format/SKILL.md",
+      "canonicalPath": "full-sources/research/aris/skills/jurisdiction-format/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/research/aris/skills/skills-codex/overleaf-sync/SKILL.md",
+      "canonicalPath": "full-sources/research/aris/skills/overleaf-sync/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/research/aris/skills/skills-codex/prior-art-search/SKILL.md",
+      "canonicalPath": "full-sources/research/aris/skills/prior-art-search/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/research/aris/skills/skills-codex/qzcli/SKILL.md",
+      "canonicalPath": "full-sources/research/aris/skills/qzcli/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/research/aris/skills/skills-codex/system-profile/SKILL.md",
+      "canonicalPath": "full-sources/research/aris/skills/system-profile/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/research/aris/skills/skills-codex/web-debug-search/SKILL.md",
+      "canonicalPath": "full-sources/research/aris/skills/web-debug-search/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/research/paperspine/dist/claude/skills/paper-spine/SKILL.md",
+      "canonicalPath": "full-sources/research/paperspine/dist/codex/skills/paper-spine/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/research/paperspine/dist/openclaw/skills/paper-spine/SKILL.md",
+      "canonicalPath": "full-sources/research/paperspine/dist/codex/skills/paper-spine/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/research/paperspine/src/skill/SKILL.md",
+      "canonicalPath": "full-sources/research/paperspine/dist/codex/skills/paper-spine/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/official/microsoft-skills/.github/plugins/azure-sdk-typescript/skills/applicationinsights-web-ts/SKILL.md",
+      "canonicalPath": "full-sources/official/microsoft-skills/.github/skills/applicationinsights-web-ts/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/official/openai-plugins/plugins/build-web-apps/skills/stripe-best-practices/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/stripe/skills/stripe-best-practices/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/official/openai-plugins/plugins/chronograph-lp/skills/chronograph-portfolio-company-one-pager/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/chronograph-gp/skills/chronograph-portfolio-company-one-pager/SKILL.md",
+      "reason": "packaging-duplicate",
+      "evidence": "exact-git-blob"
+    },
+    {
+      "path": "full-sources/research/ai-research-skills/15-rag/chroma/SKILL.md",
+      "canonicalPath": "full-sources/research/hermes-agent/optional-skills/mlops/chroma/SKILL.md",
+      "reason": "equivalent-instruction-body",
+      "evidence": "normalized-instruction-equivalent"
+    },
+    {
+      "path": "full-sources/research/ai-research-skills/18-multimodal/clip/SKILL.md",
+      "canonicalPath": "full-sources/research/hermes-agent/optional-skills/mlops/clip/SKILL.md",
+      "reason": "equivalent-instruction-body",
+      "evidence": "normalized-instruction-equivalent"
+    },
+    {
+      "path": "full-sources/research/ai-research-skills/16-prompt-engineering/dspy/SKILL.md",
+      "canonicalPath": "full-sources/research/hermes-agent/optional-skills/mlops/research/dspy/SKILL.md",
+      "reason": "equivalent-instruction-body",
+      "evidence": "normalized-instruction-equivalent"
+    },
+    {
+      "path": "full-sources/research/ai-research-skills/15-rag/faiss/SKILL.md",
+      "canonicalPath": "full-sources/research/hermes-agent/optional-skills/mlops/faiss/SKILL.md",
+      "reason": "equivalent-instruction-body",
+      "evidence": "normalized-instruction-equivalent"
+    },
+    {
+      "path": "full-sources/research/ai-research-skills/02-tokenization/huggingface-tokenizers/SKILL.md",
+      "canonicalPath": "full-sources/research/hermes-agent/optional-skills/mlops/huggingface-tokenizers/SKILL.md",
+      "reason": "equivalent-instruction-body",
+      "evidence": "normalized-instruction-equivalent"
+    },
+    {
+      "path": "full-sources/research/ai-research-skills/16-prompt-engineering/instructor/SKILL.md",
+      "canonicalPath": "full-sources/research/hermes-agent/optional-skills/mlops/instructor/SKILL.md",
+      "reason": "equivalent-instruction-body",
+      "evidence": "normalized-instruction-equivalent"
+    },
+    {
+      "path": "full-sources/research/ai-research-skills/18-multimodal/llava/SKILL.md",
+      "canonicalPath": "full-sources/research/hermes-agent/optional-skills/mlops/llava/SKILL.md",
+      "reason": "equivalent-instruction-body",
+      "evidence": "normalized-instruction-equivalent"
+    },
+    {
+      "path": "full-sources/research/ai-research-skills/03-fine-tuning/peft/SKILL.md",
+      "canonicalPath": "full-sources/research/hermes-agent/optional-skills/mlops/peft/SKILL.md",
+      "reason": "equivalent-instruction-body",
+      "evidence": "normalized-instruction-equivalent"
+    },
+    {
+      "path": "full-sources/research/ai-research-skills/08-distributed-training/pytorch-lightning/SKILL.md",
+      "canonicalPath": "full-sources/research/hermes-agent/optional-skills/mlops/pytorch-lightning/SKILL.md",
+      "reason": "equivalent-instruction-body",
+      "evidence": "normalized-instruction-equivalent"
+    },
+    {
+      "path": "full-sources/research/ai-research-skills/06-post-training/simpo/SKILL.md",
+      "canonicalPath": "full-sources/research/hermes-agent/optional-skills/mlops/simpo/SKILL.md",
+      "reason": "equivalent-instruction-body",
+      "evidence": "normalized-instruction-equivalent"
+    },
+    {
+      "path": "full-sources/research/ai-research-skills/06-post-training/slime/SKILL.md",
+      "canonicalPath": "full-sources/research/hermes-agent/optional-skills/mlops/slime/SKILL.md",
+      "reason": "equivalent-instruction-body",
+      "evidence": "normalized-instruction-equivalent"
+    },
+    {
+      "path": "full-sources/research/ai-research-skills/18-multimodal/whisper/SKILL.md",
+      "canonicalPath": "full-sources/research/hermes-agent/optional-skills/mlops/whisper/SKILL.md",
+      "reason": "equivalent-instruction-body",
+      "evidence": "normalized-instruction-equivalent"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/figma-create-new-file/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/figma/skills/figma-create-new-file/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/figma-generate-design/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/figma/skills/figma-generate-design/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/figma-generate-library/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/figma/skills/figma-generate-library/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/figma-use/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/figma/skills/figma-use/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/gh-address-comments/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/github/skills/gh-address-comments/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/gh-fix-ci/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/github/skills/gh-fix-ci/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/linear/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/linear/skills/linear/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/netlify-deploy/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/netlify/skills/netlify-deploy/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/notion-knowledge-capture/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/notion/skills/notion-knowledge-capture/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/notion-meeting-intelligence/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/notion/skills/notion-meeting-intelligence/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/notion-research-documentation/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/notion/skills/notion-research-documentation/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/notion-spec-to-implementation/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/notion/skills/notion-spec-to-implementation/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.system/plugin-creator/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/.agents/skills/plugin-creator/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/render-deploy/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/render/skills/render-deploy/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/sentry/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/sentry/skills/sentry/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/official/openai-skills/skills/.curated/yeet/SKILL.md",
+      "canonicalPath": "full-sources/official/openai-plugins/plugins/github/skills/yeet/SKILL.md",
+      "reason": "superseded-source",
+      "evidence": "current-openai-plugins-successor"
+    },
+    {
+      "path": "full-sources/research/hermes-agent/skills/creative/popular-web-designs/SKILL.md",
+      "canonicalPath": "full-sources/curated/popular-web-designs/skills-seed/popular-web-designs/SKILL.md",
+      "reason": "host-specific-alias",
+      "evidence": "same-package-layout-curated-preference"
+    }
+  ]
+}

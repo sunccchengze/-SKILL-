@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sunccchengze/-SKILL-/schemas/ai-research-senpai-council/source-record.schema.json",
+  "title": "AI Research Senpai Council source record",
+  "description": "Schema for each JSON Lines row in references/sources/sources.jsonl.",
+  "type": "object",
+  "required": [
+    "source_id", "creator_id", "platform", "content_id", "title", "url",
+    "published_at", "fetched_at", "modality", "extraction_coverage", "directness",
+    "status", "original_uploader", "language", "commercial_disclosure", "notes"
+  ],
+  "properties": {
+    "source_id": {"type": "string", "pattern": "^SRC-[A-Z0-9-]+$"},
+    "creator_id": {"$ref": "#/$defs/creatorId"},
+    "platform": {
+      "enum": ["xiaohongshu", "bilibili", "buaa", "csdn", "zhihu", "youtube", "academia-insider"]
+    },
+    "content_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "url": {"type": "string", "format": "uri", "pattern": "^https://"},
+    "published_at": {
+      "oneOf": [
+        {"type": "string", "format": "date"},
+        {"type": "null"}
+      ]
+    },
+    "fetched_at": {"type": "string", "format": "date"},
+    "modality": {"$ref": "#/$defs/modality"},
+    "extraction_coverage": {"type": "string", "minLength": 1},
+    "directness": {"enum": ["direct", "indirect", "secondary"]},
+    "status": {"enum": ["live", "unknown", "unlisted", "private", "unavailable"]},
+    "original_uploader": {
+      "oneOf": [
+        {"type": "boolean"},
+        {"const": "unknown"}
+      ]
+    },
+    "language": {"enum": ["zh-CN", "en"]},
+    "commercial_disclosure": {"type": "string", "minLength": 1},
+    "notes": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "creatorId": {
+      "enum": [
+        "zoey", "yang-shixiong", "mai-xiaozhe", "simin", "he-jing", "li-mu",
+        "andy-stapleton", "amina-yonis", "tara-brabazon", "james-hayton",
+        "kriukow", "academic-english-now"
+      ]
+    },
+    "modality": {
+      "enum": [
+        "mediated_export", "creator_description", "creator_authored_outline",
+        "institutional_profile", "secondary_summary", "creator_transcript",
+        "related_video_metadata"
+      ]
+    }
+  }
+}

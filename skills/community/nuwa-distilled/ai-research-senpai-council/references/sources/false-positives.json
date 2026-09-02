@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "checked_at": "2026-08-16",
+  "exclusions": [
+    {
+      "platform": "youtube",
+      "content_id": "KzmGTTv6H6s",
+      "url": "https://www.youtube.com/watch?v=KzmGTTv6H6s",
+      "incorrect_attribution": "Qualitative Researcher Dr Kriukow",
+      "decision": "exclude",
+      "reason": "核验后不是 Kriukow 的原创视频；不得进入其来源或声明。"
+    },
+    {
+      "platform": "youtube",
+      "content_id": "PwVAMgL5f6M",
+      "url": "https://www.youtube.com/watch?v=PwVAMgL5f6M",
+      "incorrect_attribution": "Qualitative Researcher Dr Kriukow",
+      "decision": "exclude",
+      "reason": "核验后不是 Kriukow 的原创视频；不得进入其来源或声明。"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1eL4y1n7Cw",
+      "url": "https://www.bilibili.com/video/BV1eL4y1n7Cw/",
+      "incorrect_attribution": "一只思敏在浙大",
+      "decision": "exclude",
+      "reason": "核验后不是思敏的原创视频。"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1Qv42117Hk",
+      "url": "https://www.bilibili.com/video/BV1Qv42117Hk/",
+      "incorrect_attribution": "一只思敏在浙大",
+      "decision": "exclude",
+      "reason": "核验后不是思敏的原创视频。"
+    },
+    {
+      "platform": "bilibili",
+      "content_id": "BV1fm421377U",
+      "url": "https://www.bilibili.com/video/BV1fm421377U/",
+      "incorrect_attribution": null,
+      "decision": "metadata_only_not_claim_evidence",
+      "reason": "当前只能看到上传者，历史搜索片段不可冒充可访问的完整内容。"
+    }
+  ]
+}

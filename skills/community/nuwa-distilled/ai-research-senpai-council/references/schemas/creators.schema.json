@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sunccchengze/-SKILL-/schemas/ai-research-senpai-council/creators.schema.json",
+  "title": "AI Research Senpai Council creator registry",
+  "type": "object",
+  "required": ["schema_version", "checked_at", "creators"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "checked_at": {"type": "string", "format": "date"},
+    "creators": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {"$ref": "#/$defs/creator"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "nonEmptyString": {"type": "string", "minLength": 1},
+    "stringList": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/nonEmptyString"},
+      "uniqueItems": true
+    },
+    "creator": {
+      "type": "object",
+      "required": [
+        "creator_id", "display_name", "canonical_name", "platforms", "languages",
+        "council_role", "strengths", "evidence_profile", "commercial_disclosure",
+        "integrity_flags", "identity_note"
+      ],
+      "properties": {
+        "creator_id": {
+          "enum": [
+            "zoey", "yang-shixiong", "mai-xiaozhe", "simin", "he-jing", "li-mu",
+            "andy-stapleton", "amina-yonis", "tara-brabazon", "james-hayton",
+            "kriukow", "academic-english-now"
+          ]
+        },
+        "display_name": {"$ref": "#/$defs/nonEmptyString"},
+        "canonical_name": {"$ref": "#/$defs/nonEmptyString"},
+        "platforms": {"$ref": "#/$defs/stringList"},
+        "languages": {"$ref": "#/$defs/stringList"},
+        "council_role": {"$ref": "#/$defs/nonEmptyString"},
+        "strengths": {"$ref": "#/$defs/stringList"},
+        "evidence_profile": {"$ref": "#/$defs/nonEmptyString"},
+        "commercial_disclosure": {"$ref": "#/$defs/nonEmptyString"},
+        "integrity_flags": {"$ref": "#/$defs/stringList"},
+        "identity_note": {"$ref": "#/$defs/nonEmptyString"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

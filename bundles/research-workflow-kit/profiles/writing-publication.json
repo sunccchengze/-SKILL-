@@ -1,0 +1,25 @@
+{
+  "name": "writing-publication",
+  "description": "Evidence-bounded manuscript, figures, review, revision and disclosure.",
+  "risk": "not a ghostwriting or automatic submission workflow",
+  "skillIds": [
+    "research-workflow-kit::research-workflow-orchestrator",
+    "research-workflow-kit::systematic-evidence-synthesis",
+    "research-workflow-kit::reproducible-research-analysis",
+    "research-workflow-kit::academic-integrity-ai-disclosure",
+    "scientific-agent-skills::skills/scientific-writing",
+    "scientific-agent-skills::skills/peer-review",
+    "scientific-agent-skills::skills/citation-management",
+    "scientific-agent-skills::skills/venue-templates",
+    "scientific-agent-skills::skills/scientific-visualization",
+    "nature-skills::skills/nature-writing",
+    "nature-skills::skills/nature-polishing",
+    "nature-skills::skills/nature-reviewer",
+    "nature-skills::skills/nature-citation",
+    "nature-skills::skills/nature-statistics",
+    "nature-skills::skills/nature-figure",
+    "nature-skills::skills/nature-data",
+    "paperspine::dist/codex/skills/paper-spine",
+    "research-paper-writing-skills::research-paper-writing"
+  ]
+}

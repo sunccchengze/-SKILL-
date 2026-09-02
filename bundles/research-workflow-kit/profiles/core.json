@@ -1,0 +1,24 @@
+{
+  "name": "core",
+  "description": "Permissive/self-contained cross-disciplinary starting set; default recommendation.",
+  "risk": "review each selected SKILL before use",
+  "skillIds": [
+    "research-workflow-kit::research-workflow-orchestrator",
+    "research-workflow-kit::research-question-protocol",
+    "research-workflow-kit::systematic-evidence-synthesis",
+    "research-workflow-kit::qualitative-mixed-methods",
+    "research-workflow-kit::reproducible-research-analysis",
+    "research-workflow-kit::academic-integrity-ai-disclosure",
+    "scientific-agent-skills::skills/paper-lookup",
+    "scientific-agent-skills::skills/citation-management",
+    "scientific-agent-skills::skills/literature-review",
+    "scientific-agent-skills::skills/experimental-design",
+    "scientific-agent-skills::skills/statistical-analysis",
+    "scientific-agent-skills::skills/scientific-writing",
+    "scientific-agent-skills::skills/peer-review",
+    "scientific-agent-skills::skills/pyzotero",
+    "scientific-agent-skills::skills/exploratory-data-analysis",
+    "openai-skills::skills/.curated/jupyter-notebook",
+    "openai-skills::skills/.curated/pdf"
+  ]
+}

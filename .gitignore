@@ -1,0 +1,15 @@
+# Local validation/install artifacts (vendored distributable dist/ directories remain trackable)
+tools/openwiki/node_modules/
+tools/openwiki/dist/
+tools/openwiki/coverage/
+**/__pycache__/
+*.py[cod]
+
+# ScreenCoder local inputs, outputs, and plaintext model credentials
+tools/screencoder/data/
+tools/screencoder/tmp/
+tools/screencoder/*_api.txt
+
+# Local materialization of complete submodule sources
+full-library/
+catalog/full-skills.local.json
